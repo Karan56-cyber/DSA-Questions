@@ -1,0 +1,18 @@
+def permute(arr,start,end):
+
+    if start==end:
+        print(arr)
+        return
+
+    for i in range(start,end):
+
+        arr[start],arr[i]=arr[i],arr[start]
+
+        permute(arr,start+1,end)
+
+        arr[start],arr[i]=arr[i],arr[start]
+
+
+arr=['A','B','C']
+
+permute(arr,0,len(arr))
